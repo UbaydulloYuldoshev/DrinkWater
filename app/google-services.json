@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952409350954",
+    "project_id": "waterreminder-c62e6",
+    "storage_bucket": "waterreminder-c62e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952409350954:android:cf264d47c9a116fbfd3453",
+        "android_client_info": {
+          "package_name": "uz.gita.waterdrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952409350954-f6lno21f1n01k2fn0rv36mcapbnqpavm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvOFDMsVT_y4hAvK3MfM0sVAtKzs0hbko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952409350954-f6lno21f1n01k2fn0rv36mcapbnqpavm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

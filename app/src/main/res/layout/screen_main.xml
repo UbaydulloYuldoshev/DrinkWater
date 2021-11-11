@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.MainScreen">
+
+    <ImageView
+        android:id="@+id/action_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/main_color2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintBottom_toBottomOf="@id/action_bar_main"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don`t forget to drink water"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/action_bar_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_main">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/chat_box"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/box"
+                app:layout_constraintLeft_toRightOf="@id/assistant"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Don`t drink water while standing"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/chat_box"
+                app:layout_constraintLeft_toLeftOf="@id/chat_box"
+                app:layout_constraintRight_toRightOf="@id/chat_box"
+                app:layout_constraintTop_toTopOf="@id/chat_box" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/assistant"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/robot_u" />
+
+            <com.yangp.ypwaveview.YPWaveView
+                android:id="@+id/circleWave"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:animatorEnable="true"
+                app:behideColor="#4e99e6"
+                app:borderColor="#2D4E99E6"
+                app:borderWidthSize="4dp"
+                app:frontColor="@color/main_color2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assistant"
+                app:max="3000"
+                app:progress="0"
+                app:shapeType="circle"
+                app:strong="100"
+                app:textHidden="true" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/welldone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/circleWave"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@id/circleWave"
+                app:layout_constraintRight_toRightOf="@id/circleWave"
+                app:layout_constraintTop_toTopOf="@id/circleWave"
+                app:layout_constraintVertical_bias="0.0"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/weeldone" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/main_add_water_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/targetWater"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/circle_wave" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_cup"
+                app:layout_constraintBottom_toBottomOf="@id/main_add_water_btn"
+                app:layout_constraintLeft_toLeftOf="@id/main_add_water_btn"
+                app:layout_constraintRight_toRightOf="@id/main_add_water_btn"
+                app:layout_constraintTop_toTopOf="@id/main_add_water_btn" />
+
+            <TextView
+                android:id="@+id/target"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="Daily target"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/circleWave" />
+
+            <TextView
+                android:id="@+id/targetWater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:textColor="@color/main_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/circleWave"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/assistant"
+                tools:text="2210ml" />
+
+            <TextView
+                android:id="@+id/goalWater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="0ml"
+                android:textColor="@color/main_color2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/circleWave"
+                app:layout_constraintTop_toBottomOf="@id/assistant" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/change_cup"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/circleWave"
+                app:layout_constraintTop_toBottomOf="@id/goalWater">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_cup" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/currentCupSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Size:"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="@id/change_cup"
+                app:layout_constraintRight_toRightOf="@id/change_cup"
+                app:layout_constraintTop_toBottomOf="@id/change_cup" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/target">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#C3DDEAED">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/intro"
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintLeft_toLeftOf="@id/listDrunkWater"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="false"/>
+
+                    <ImageView
+                        android:id="@+id/drop"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/waterbottle"
+                        app:layout_constraintBottom_toBottomOf="@id/intro"
+                        app:layout_constraintLeft_toLeftOf="@id/timer" />
+
+                    <ImageView
+                        android:id="@+id/timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="105dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintRight_toLeftOf="@id/waterDrinkTime"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/waterDrinkTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintHorizontal_bias="0.68"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/intro" />
+
+
+                    <TextView
+                        android:id="@+id/drinkWaterSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Size"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/intro"
+                        app:layout_constraintLeft_toLeftOf="@id/waterDrinkTime" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listDrunkWater"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/intro" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

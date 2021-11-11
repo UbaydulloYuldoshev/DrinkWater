@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.ScreenSettings">
+
+    <ImageView
+        android:id="@+id/settingsActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/main_color2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/settingsActionBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/settingsActionBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Personal information"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settingsActionBar" />
+
+    <View
+        android:id="@+id/viewLineTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:background="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/personal" />
+
+    <LinearLayout
+        android:id="@+id/setTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/viewLineTop">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_drink_bottle500" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Target water"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changeGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/setTarget">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic__gender" />
+
+        <TextView
+            android:id="@+id/gender"
+            style="@style/setting_item_style"
+            android:text="Gender" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changeWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/changeGender">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:padding="3dp"
+            android:src="@drawable/ic_scale" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Weight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changeWakeUpTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/changeWeight">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_alarm" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Wake up time" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changeSleepingTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/changeWakeUpTime">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_time2" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Sleeping time" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="General"
+        android:textColor="#66000000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeSleepingTime" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:background="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/general" />
+
+    <LinearLayout
+        android:id="@+id/setReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/viewLine">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_notification" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Reminder" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:background="?android:selectableItemBackground"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/setReminder">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_share" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Share" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="invisible"
+        android:background="?selectableItemBackgroundBorderless"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/share">
+
+        <ImageView
+            style="@style/setting_item_image_style"
+            android:src="@drawable/ic_restore" />
+
+        <TextView
+            style="@style/setting_item_style"
+            android:text="Reset data" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/settingWaterTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="2210ml"
+        android:textColor="@color/main_color2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/setTarget"
+        app:layout_constraintTop_toTopOf="@id/setTarget" />
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Male"
+        android:textColor="@color/main_color2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/changeGender"
+        app:layout_constraintTop_toTopOf="@id/changeGender" />
+
+    <TextView
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="70 kg"
+        android:textColor="@color/main_color2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/changeWeight"
+        app:layout_constraintTop_toTopOf="@id/changeWeight" />
+
+    <TextView
+        android:id="@+id/wakeUpTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/main_color2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/changeWakeUpTime"
+        app:layout_constraintTop_toTopOf="@id/changeWakeUpTime" />
+
+    <TextView
+        android:id="@+id/sleepingTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/main_color2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/changeSleepingTime"
+        app:layout_constraintTop_toTopOf="@id/changeSleepingTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

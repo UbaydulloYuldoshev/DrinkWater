@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_corner">
+
+    <ImageView
+        android:id="@+id/size100"
+        style="@style/cup_size_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/little"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/size150"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/size100Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size100"
+        app:layout_constraintRight_toRightOf="@id/size100"
+        app:layout_constraintTop_toBottomOf="@id/size100" />
+
+    <ImageView
+        android:id="@+id/size150"
+        style="@style/cup_size_style"
+        android:layout_margin="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_drink_bottle250"
+        app:layout_constraintLeft_toRightOf="@id/size100"
+        app:layout_constraintRight_toLeftOf="@id/size200"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/size150Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size150"
+        app:layout_constraintRight_toRightOf="@id/size150"
+        app:layout_constraintTop_toBottomOf="@id/size150" />
+
+    <ImageView
+        android:id="@+id/size200"
+        style="@style/cup_size_style"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_drink_bottle300"
+        app:layout_constraintLeft_toRightOf="@id/size150"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/size200Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size200"
+        app:layout_constraintRight_toRightOf="@id/size200"
+        app:layout_constraintTop_toBottomOf="@id/size200" />
+
+    <ImageView
+        android:id="@+id/size250"
+        style="@style/cup_size_style"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_drink_bottle300"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/size300"
+        app:layout_constraintTop_toBottomOf="@id/size100Text" />
+
+    <TextView
+        android:id="@+id/size250Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size250"
+        app:layout_constraintRight_toRightOf="@id/size250"
+        app:layout_constraintTop_toBottomOf="@id/size250" />
+
+    <ImageView
+        android:id="@+id/size300"
+        style="@style/cup_size_style"
+        android:layout_margin="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_bottle"
+        app:layout_constraintLeft_toRightOf="@id/size250"
+        app:layout_constraintRight_toLeftOf="@id/size400"
+        app:layout_constraintTop_toBottomOf="@id/size150Text" />
+
+    <TextView
+        android:id="@+id/size300Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size300"
+        app:layout_constraintRight_toRightOf="@id/size300"
+        app:layout_constraintTop_toBottomOf="@id/size300" />
+
+    <ImageView
+        android:id="@+id/size400"
+        style="@style/cup_size_style"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_drink_bottle500"
+        app:layout_constraintLeft_toRightOf="@id/size300"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size200Text" />
+
+    <TextView
+        android:id="@+id/size400Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="400 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size400"
+        app:layout_constraintRight_toRightOf="@id/size400"
+        app:layout_constraintTop_toBottomOf="@id/size400" />
+
+    <ImageView
+        android:id="@+id/size500"
+        style="@style/cup_size_style"
+        android:layout_marginTop="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/large"
+        app:layout_constraintLeft_toLeftOf="@id/size250"
+        app:layout_constraintTop_toBottomOf="@id/size250Text" />
+
+    <TextView
+        android:id="@+id/size500Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500 ml"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/size500"
+        app:layout_constraintRight_toRightOf="@id/size500"
+        app:layout_constraintTop_toBottomOf="@id/size500" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Please choose the cup!"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/dialogAssistant"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dialogAssistant"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/robot_u" />
+
+    <TextView
+        android:id="@+id/btn_ok"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:gravity="center"
+        android:background="@drawable/ok_button"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:layout_margin="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogAssistant" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:gravity="center"
+        android:background="@drawable/cancel_button"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:layout_margin="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/main_color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogAssistant" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
